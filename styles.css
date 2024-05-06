@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f2d50f, #da0641); /* Un fondo con amarillo y rojo */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #333333; /* Texto oscuro para contrastar con el fondo claro */
+    margin-bottom: 20px;
+}
+
+.board {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;  /* Asegúrate de que el tablero tiene ancho */
+    height: 500px; /* Añade una altura específica si es necesario */
+    margin: 20px auto;
+    
+    
+}
+
+.card {
+    background-color: #ffffff; /* Tarjetas blancas para alto contraste */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Texto oscuro */
+    font-size: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card.hidden {
+    background-color: #9E9E9E;
+    color: transparent;
+}
+
+.card:not(.hidden) {
+    transform: scale(1.1); /* Efecto de escalado para resaltar la carta seleccionada */
+    background-color: #4CAF50; /* Verde para las tarjetas reveladas */
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+p {
+    color: #333333; /* Texto oscuro para mejor visibilidad */
+    margin: 10px 0;
+}
